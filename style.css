@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.todo {
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.47);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  padding: 30px;
+}
+
+h2 {
+  text-align: center;
+  font-variant: small-caps;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+.text-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.text {
+  width: 70%;
+  height: 30px;
+  padding: 0 10px;
+}
+
+.text:focus {
+  outline: 1px solid #a18cd1;
+}
+
+.button {
+  font-variant: small-caps;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  width: 25%;
+  height: 32px;
+  background: rgba(161, 140, 209, 0.75);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  background-size: 200% auto;
+  border: 1px solid rgba(161, 140, 209, 0.17);
+}
+
+.button:hover {
+  background-position: right center;
+}
+
+.button:active {
+  background-position: left;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  height: 60%;
+  scrollbar-color: rgba(161, 140, 209, 0.75) rgba(174, 163, 197, 0.75);
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scroll-margin: 10px;
+  scroll-padding: 10px;
+}
+
+.task {
+  position: relative;
+  background: #fbc2eb;
+  font-variant: small-caps;
+  font-size: 12px;
+  border-radius: 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 10px 0 10px 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 97%;
+}
+
+.delete {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(161, 140, 209, 0.75);
+  transition: width 0.3s ease;
+}
+
+.task:hover .delete {
+  width: 60px;
+}
+
+.delete::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f1f8";
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.task:hover .delete::after {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
