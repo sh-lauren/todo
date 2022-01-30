@@ -80,8 +80,6 @@ input {
   scrollbar-color: rgba(161, 140, 209, 0.75) rgba(174, 163, 197, 0.75);
   scrollbar-width: thin;
   scroll-behavior: smooth;
-  scroll-margin: 10px;
-  scroll-padding: 10px;
 }
 
 .task {
